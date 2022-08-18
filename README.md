@@ -27,7 +27,7 @@ The bot checks any new follow activity every 15 minutes itself. Also, you can us
 > __*NOTE*__: Given the limitation of twitter API calls to check following and follows one can make in 15-minute window, one gets limited to how much following activities one can observe in a time frame.
 
 
-### Approach: A Reddit post
+### Approach: A Reddit [post](https://www.reddit.com/r/Discord_Bots/comments/sfp5je/discord_bot_to_track_new_follows_in_twitter/)
 
 **Me**: 
 
@@ -40,4 +40,3 @@ I wanted to know feasible and scalable methods to accomplish this task, using tw
 From what I've seen, this looks like the most feasible. Scalability is not an issue unless you're dealing with millions of records, an SQLite database and asynchronous programming will keep your code fast and efficient. No need to complicate, your method seems like it would work.
 
 Authenticate > Periodically > Add follower list to database along with unix timestamp > Check records with the timestamp that's closest to the current one > Find differences > Post to webhook
-
